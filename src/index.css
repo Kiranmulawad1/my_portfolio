@@ -1,34 +1,98 @@
 /* src/index.css */
 
-/* 2. All @import rules go here, including external fonts */
+/* 1. All @import rules go here, including external fonts */
 @import url('https://rsms.me/inter/inter.css');
 
-/* 3. Then, Tailwind CSS directives */
+/* 2. Then, Tailwind CSS directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 4. Custom CSS rules */
+/* 3. Custom CSS rules below */
+
+/* Define CSS variables for themes for easier maintenance */
+:root {
+    --bg-color-light: #FDFBF7;
+    --text-color-light: #333333;
+    --bg-gradient-start-light: #f7f3ed;
+    --bg-gradient-end-light: #fdfbf7;
+}
+
+:root.dark {
+    --bg-color-dark: #1a202c;
+    --text-color-dark: #e2e8f0;
+    --bg-gradient-start-dark: #1f2533;
+    --bg-gradient-end-dark: #1a202c;
+}
+
+/* Base body styles for font and background animation */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #FDFBF7; /* Light background */
-    color: #333333; /* Dark text for contrast */
+    transition: background-color 0.5s ease, color 0.5s ease;
+    background-image: linear-gradient(
+        -45deg,
+        var(--bg-gradient-start-light) 0%,
+        var(--bg-gradient-end-light) 25%,
+        var(--bg-gradient-start-light) 50%,
+        var(--bg-gradient-end-light) 75%,
+        var(--bg-gradient-start-light) 100%
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
 }
 
-/* Let's define the base dark mode colors directly on the root. */
-html.dark {
-    color: #e2e8f0; /* Default text color for dark mode */
-    background-color: #1a202c; /* Default background for dark mode */
+/* Keyframe animation for the background shift */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-/* Nav link transition remains the same */
+/* Nav link transitions for hover/active */
 .nav-link {
     transition: color 0.3s ease, border-bottom-color 0.3s ease;
     border-bottom: 2px solid transparent;
 }
-.nav-link:hover, .nav-link.active {
-    color: #DAA520; /* Accent color for hover/active */
-    border-bottom-color: #DAA520;
+
+/* You'll need to apply dark mode styles in the components themselves
+   using the `dark:` prefix for Tailwind classes, which is already done in the code. */
+
+/* The following styles are for a fallback and a base for some components, but the
+   dark mode specific versions are best handled via Tailwind classes directly on the elements. */
+body {
+  color: var(--text-color-light);
 }
 
-/* All other styles are now handled with Tailwind's dark: classes */
+html.dark body {
+  color: var(--text-color-dark);
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.3s ease;
+}
+.modal-content {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.modal.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.modal.hidden .modal-content {
+    transform: translateY(20px);
+    opacity: 0;
+}

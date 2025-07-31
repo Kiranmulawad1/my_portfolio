@@ -1,9 +1,13 @@
-// src/components/ProjectCard.jsx
 import React from 'react';
+import { motion } from 'framer-motion';
 
-function ProjectCard({ project, onDetailsClick }) {
+const ProjectCard = ({ project, onDetailsClick, variants }) => {
     return (
-        <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg project-card max-w-xs mx-auto">
+        <motion.div
+            className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg project-card max-w-xs mx-auto"
+            whileHover={{ scale: 1.05 }}
+            variants={variants}
+        >
             <img src={project.image} alt={project.title} className="rounded-md mb-3 w-full h-32 object-cover" />
             <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-1">{project.title}</h3>
             <p className="text-gray-600 dark:text-gray-300 text-xs mb-3">{project.description.split('.')[0] + '.'}</p>
@@ -13,8 +17,8 @@ function ProjectCard({ project, onDetailsClick }) {
             >
                 View Details
             </button>
-        </div>
+        </motion.div>
     );
-}
+};
 
 export default ProjectCard;
