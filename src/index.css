@@ -1,0 +1,34 @@
+/* src/index.css */
+
+/* 2. All @import rules go here, including external fonts */
+@import url('https://rsms.me/inter/inter.css');
+
+/* 3. Then, Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 4. Custom CSS rules */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FDFBF7; /* Light background */
+    color: #333333; /* Dark text for contrast */
+}
+
+/* Let's define the base dark mode colors directly on the root. */
+html.dark {
+    color: #e2e8f0; /* Default text color for dark mode */
+    background-color: #1a202c; /* Default background for dark mode */
+}
+
+/* Nav link transition remains the same */
+.nav-link {
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+.nav-link:hover, .nav-link.active {
+    color: #DAA520; /* Accent color for hover/active */
+    border-bottom-color: #DAA520;
+}
+
+/* All other styles are now handled with Tailwind's dark: classes */
