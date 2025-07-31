@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ThemeToggle from './ThemeToggle.jsx';
+import AnimatedName from './AnimatedName.jsx'; // Import the new component
 
 const Header = ({ theme, toggleTheme }) => {
     return (
@@ -11,13 +12,8 @@ const Header = ({ theme, toggleTheme }) => {
             className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 shadow-sm"
         >
             <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-                <motion.a
-                    href="#"
-                    className="text-xl font-bold text-gray-800 dark:text-white"
-                    whileHover={{ scale: 1.1 }}
-                >
-                    Kiran Mulawad
-                </motion.a>
+                {/* Use the new AnimatedName component here */}
+                <AnimatedName firstName="Kiran" lastName="Mulawad" />
                 <div className="hidden md:flex space-x-8 items-center">
                     <motion.a whileHover={{ scale: 1.1, color: '#DAA520' }} href="#about" className="nav-link text-gray-600 dark:text-gray-300">About</motion.a>
                     <motion.a whileHover={{ scale: 1.1, color: '#DAA520' }} href="#skills" className="nav-link text-gray-600 dark:text-gray-300">Skills</motion.a>
