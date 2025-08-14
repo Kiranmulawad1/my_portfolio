@@ -7,38 +7,38 @@ The site is built with modern web technologies, featuring a clean design and smo
 ---
 
 ## ✨ Features
-Responsive Design: Optimized for a seamless experience on all devices, from mobile phones to large desktops.
+- Responsive Design: Optimized for a seamless experience on all devices, from mobile phones to large desktops.
 
-Interactive UI: Uses framer-motion to create subtle scroll-triggered and hover animations.
+- Interactive UI: Uses framer-motion to create subtle scroll-triggered and hover animations.
 
-Light & Dark Mode: A toggle button allows users to switch between light and dark themes.
+- Light & Dark Mode: A toggle button allows users to switch between light and dark themes.
 
-Project Showcase: A dynamic section displays key projects with modal pop-ups for detailed information.
+- Project Showcase: A dynamic section displays key projects with modal pop-ups for detailed information.
 
-Professional CV: A downloadable PDF of my resume is available for easy access.
+- Professional CV: A downloadable PDF of my resume is available for easy access.
 
 ---
 
 ## 💻 Tech Stack
-Framework: React
+- Framework: React
 
-Build Tool: Vite
+- Build Tool: Vite
 
-Styling: Tailwind CSS
+- Styling: Tailwind CSS
 
-Animations: Framer Motion
+- Animations: Framer Motion
 
-Deployment: Vercel (for continuous deployment)
+- Deployment: Vercel (for continuous deployment)
 
 ---
 
 ## 🤝 Contact
-Email: kiranmulawad1@gmail.com
+- Email: kiranmulawad1@gmail.com
 
-LinkedIn: linkedin.com/in/kiran-mulawad-4573b8229/
+- LinkedIn: linkedin.com/in/kiran-mulawad-4573b8229/
 
-GitHub: github.com/Kiranmulawad1
+- GitHub: github.com/Kiranmulawad1
 
-Instagram: instagram.com/kiran_mulawad1/
+- Instagram: instagram.com/kiran_mulawad1/
 
 Feel free to connect with me for any questions, collaborations, or opportunities!
