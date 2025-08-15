@@ -1,8 +1,8 @@
 // src/data/projects.js
-import ragChatbotImage from '/Users/kiranmulawad/my_portfolio/src/assets/RAG-Chatbot.png';
-import dataPipelineImage from '/Users/kiranmulawad/my_portfolio/src/assets/Data-Engineering.png';
-import marsOrbiterImage from '/Users/kiranmulawad/my_portfolio/src/assets/MARS-Orbiter.png';
-import recruiterSystemImage from '/Users/kiranmulawad/my_portfolio/src/assets/HUSHHUSH-Recruiter.png';
+import ragChatbotImage from '../assets/RAG-Chatbot.png';
+import dataPipelineImage from '../assets/Data-Engineering.png';
+import marsOrbiterImage from '../assets/MARS-Orbiter.png';
+import recruiterSystemImage from '../assets/HUSHHUSH-Recruiter.png';
 
 const projectsData = [
     {
