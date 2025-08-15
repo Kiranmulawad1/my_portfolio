@@ -1,9 +1,14 @@
 // src/data/projects.js
+import ragChatbotImage from '/Users/kiranmulawad/my_portfolio/src/assets/RAG-Chatbot.png';
+import dataPipelineImage from '/Users/kiranmulawad/my_portfolio/src/assets/Data-Engineering.png';
+import marsOrbiterImage from '/Users/kiranmulawad/my_portfolio/src/assets/MARS-Orbiter.png';
+import recruiterSystemImage from '/Users/kiranmulawad/my_portfolio/src/assets/HUSHHUSH-Recruiter.png';
+
 const projectsData = [
     {
         id: "rag-chatbot",
         title: "RAG Chatbot for Student Support",
-        image: "/Users/kiranmulawad/my_portfolio/src/assets/RAG-Chatbot.png",
+        image: ragChatbotImage,
         description: "Built a Retrieval-Augmented Generation chatbot using LLAMA3 to answer student queries. This project focused on enhancing information retrieval and response generation for educational support.",
         tech: "LLAMA3, Python, PDF Chunking, Embedding Search, Modular Flow Control",
         role: "AI/ML Engineer",
@@ -15,7 +20,7 @@ const projectsData = [
     {
         id: "data-pipeline",
         title: "End-to-End Data Pipeline with BigQuery",
-        image: "/Users/kiranmulawad/my_portfolio/src/assets/Data-Engineering.png",
+        image: dataPipelineImage,
         description: "Automated data extraction, cleaning, and loading to Google BigQuery, culminating in Tableau dashboarding for business insights. This project showcased comprehensive data engineering skills from raw data to visualization.",
         tech: "Docker, Python, Google BigQuery, GCP SDK, MySQL, Tableau",
         role: "Data Engineer",
@@ -27,7 +32,7 @@ const projectsData = [
     {
         id: "thermal-power",
         title: "Thermal Power Prediction Mars Express Orbiter",
-        image: "/Users/kiranmulawad/my_portfolio/src/assets/MARS-Orbiter.png",
+        image: marsOrbiterImage,
         description: "Designed and containerized a full Machine Learning pipeline for thermal power prediction using satellite data from the Mars Express Orbiter. This involved data preprocessing, model training, and deployment.",
         tech: "PostgreSQL, XGBoost, CatBoost, Docker Compose",
         role: "ML Engineer",
@@ -39,7 +44,7 @@ const projectsData = [
     {
         id: "recruiter-system",
         title: "Recruiter Candidate Filtering System",
-        image: "/Users/kiranmulawad/my_portfolio/src/assets/HUSHHUSH-Recruiter.png",
+        image: recruiterSystemImage,
         description: "Developed a system to scrape GitHub profiles, cluster candidates using K-means algorithm, and automate email outreach. This project streamlined the recruitment process by identifying suitable candidates efficiently.",
         tech: "Python, PostgreSQL, Machine Learning (K-means), HTML, JS",
         role: "Software Developer & ML Practitioner",
