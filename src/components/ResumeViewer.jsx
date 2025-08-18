@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Document, Page, pdfjs } from 'react-pdf';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-import 'react-pdf/dist/esm/Page/TextLayer.css';
-import resumePDF from '../assets/Kiran_Mulawad_CV.pdf';
 
 // This is a necessary step for react-pdf to work correctly
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
+// The file path is a simple string that references the public folder
+const resumePDF = '/Kiran_Mulawad_CV.pdf';
 
 const ResumeViewer = ({ onClose }) => {
     return (
