@@ -14,10 +14,10 @@ import Contact from './sections/Contact.jsx';
 const App = () => {
     // State for light/dark theme
     const [theme, setTheme] = useState(() => {
-        if (typeof window !== 'undefined' && localStorage.getItem('theme')) {
-            return localStorage.getItem('theme');
-        }
-        return 'light';
+    if (typeof window !== 'undefined' && localStorage.getItem('theme')) {
+        return localStorage.getItem('theme');
+    }
+    return 'dark'; // This line makes dark mode the default
     });
 
     useEffect(() => {
