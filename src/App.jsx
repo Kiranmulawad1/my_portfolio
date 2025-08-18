@@ -9,16 +9,20 @@ import Projects from './sections/Projects.jsx';
 import Experience from './sections/Experience.jsx';
 import Education from './sections/Education.jsx';
 import Contact from './sections/Contact.jsx';
+import ResumeViewer from './components/ResumeViewer.jsx'; // New import
 
 // Main App component
 const App = () => {
     // State for light/dark theme
     const [theme, setTheme] = useState(() => {
-    if (typeof window !== 'undefined' && localStorage.getItem('theme')) {
-        return localStorage.getItem('theme');
-    }
-    return 'dark'; // This line makes dark mode the default
+        if (typeof window !== 'undefined' && localStorage.getItem('theme')) {
+            return localStorage.getItem('theme');
+        }
+        return 'dark';
     });
+    
+    // State to control the CV viewer modal
+    const [showResume, setShowResume] = useState(false);
 
     useEffect(() => {
         const root = document.documentElement;
@@ -71,7 +75,7 @@ const App = () => {
             <div className="antialiased font-inter bg-[#FDFBF7] dark:bg-gray-900 transition-colors duration-500">
                 <Header theme={theme} toggleTheme={toggleTheme} />
                 <main>
-                    <Hero />
+                    <Hero onShowResume={() => setShowResume(true)} />
                     <About />
                     <Skills />
                     <Projects />
@@ -81,6 +85,12 @@ const App = () => {
                 </main>
                 <Footer />
             </div>
+            {/* The ResumeViewer is conditionally rendered here */}
+            {showResume && (
+                <AnimatePresence>
+                    <ResumeViewer onClose={() => setShowResume(false)} />
+                </AnimatePresence>
+            )}
         </AnimatePresence>
     );
 };

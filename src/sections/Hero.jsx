@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Hero = () => {
+const Hero = ({ onShowResume }) => {
     return (
         <section id="hero" className="bg-white dark:bg-gray-900 min-h-screen flex items-center justify-center">
             <div className="container mx-auto px-6 py-24 text-center">
@@ -36,7 +36,12 @@ const Hero = () => {
                     className="mt-8 flex flex-col sm:flex-row justify-center gap-4"
                 >
                     <a href="#projects" className="inline-block bg-[#DAA520] text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-opacity-90 transition-transform transform hover:scale-105">View My Work</a>
-                    <a href="Kiran_Mulawad_CV.pdf" download="Kiran_Mulawad_CV.pdf" className="inline-block bg-gray-700 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-opacity-90 transition-transform transform hover:scale-105">Download CV 📄</a>
+                    <button
+                        onClick={onShowResume} // This button will now open the viewer
+                        className="inline-block bg-gray-700 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-opacity-90 transition-transform transform hover:scale-105"
+                    >
+                        View CV 📄
+                    </button>
                 </motion.div>
             </div>
         </section>
