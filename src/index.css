@@ -100,3 +100,21 @@ html.dark body {
 html {
   scroll-behavior: smooth;
 }
+/* --- UI helpers --- */
+.card { 
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+}
+
+.badge {
+  display: inline-flex; align-items: center; gap: .4rem;
+  padding: .4rem .8rem; border-radius: 9999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  font-size: .75rem; line-height: 1rem;
+}
+
+/* improve header active state you already toggle via JS */
+.nav-link.active { color: #fff; border-bottom-color: #DAA520; }
