@@ -96,3 +96,7 @@ html.dark body {
     transform: translateY(20px);
     opacity: 0;
 }
+/* in src/index.css */
+html {
+  scroll-behavior: smooth;
+}
