@@ -9,7 +9,9 @@ import Projects from './sections/Projects.jsx';
 import Experience from './sections/Experience.jsx';
 import Education from './sections/Education.jsx';
 import Contact from './sections/Contact.jsx';
-import ResumeViewer from './components/ResumeViewer.jsx'; // New import
+import ResumeViewer from './components/ResumeViewer.jsx';
+import CustomCursor from './components/CustomCursor.jsx';
+import GradientMesh from './components/GradientMesh.jsx';
 
 // Main App component
 const App = () => {
@@ -72,9 +74,15 @@ const App = () => {
 
     return (
         <AnimatePresence>
-            <div className="antialiased font-inter bg-[#FDFBF7] dark:bg-gray-900 transition-colors duration-500">
+            {/* Custom Cursor */}
+            <CustomCursor />
+
+            {/* Gradient Mesh Background */}
+            <GradientMesh theme={theme} />
+
+            <div className="antialiased font-inter bg-[#FDFBF7] dark:bg-gray-900 transition-colors duration-500 relative">
                 <Header theme={theme} toggleTheme={toggleTheme} />
-                <main>
+                <main className="relative z-10">
                     <Hero onShowResume={() => setShowResume(true)} />
                     <About />
                     <Skills />

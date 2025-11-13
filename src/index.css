@@ -118,3 +118,211 @@ html {
 
 /* improve header active state you already toggle via JS */
 .nav-link.active { color: #fff; border-bottom-color: #DAA520; }
+
+/* ===== MODERN DESIGN PATTERNS ===== */
+
+/* Custom cursor styles - hide default cursor on desktop */
+@media (min-width: 768px) {
+  body {
+    cursor: none;
+  }
+  a, button, .cursor-hover {
+    cursor: none;
+  }
+}
+
+/* Neomorphism button styles */
+.neu-button-light {
+  background: #FDFBF7;
+  box-shadow: 12px 12px 24px rgba(163, 177, 198, 0.6),
+              -12px -12px 24px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.neu-button-light:hover {
+  box-shadow: 8px 8px 16px rgba(163, 177, 198, 0.6),
+              -8px -8px 16px rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.neu-button-light:active {
+  box-shadow: inset 6px 6px 12px rgba(163, 177, 198, 0.4),
+              inset -6px -6px 12px rgba(255, 255, 255, 0.5);
+  transform: translateY(0);
+}
+
+.neu-button-dark {
+  background: #1a202c;
+  box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.4),
+              -12px -12px 24px rgba(255, 255, 255, 0.02);
+  transition: all 0.3s ease;
+}
+
+.neu-button-dark:hover {
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4),
+              -8px -8px 16px rgba(255, 255, 255, 0.02);
+  transform: translateY(-2px);
+}
+
+.neu-button-dark:active {
+  box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.4),
+              inset -6px -6px 12px rgba(255, 255, 255, 0.02);
+  transform: translateY(0);
+}
+
+/* Neomorphism card styles */
+.neu-card-light {
+  background: #FDFBF7;
+  box-shadow: 20px 20px 40px rgba(163, 177, 198, 0.5),
+              -20px -20px 40px rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+}
+
+.neu-card-dark {
+  background: #1a202c;
+  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.3),
+              -20px -20px 40px rgba(255, 255, 255, 0.015);
+  border-radius: 24px;
+}
+
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, #DAA520 0%, #FFD700 50%, #B8860B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+/* Glowing text effect */
+.glow-text {
+  text-shadow: 0 0 10px rgba(218, 165, 32, 0.5),
+               0 0 20px rgba(218, 165, 32, 0.3),
+               0 0 30px rgba(218, 165, 32, 0.2);
+}
+
+/* Glass morphism enhancement */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+/* Dark mode glass effect */
+.dark .glass-card {
+  background: rgba(26, 32, 44, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Animated underline for links */
+.animated-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(90deg, #DAA520, #FFD700);
+  transition: width 0.3s ease;
+}
+
+.animated-underline:hover::after {
+  width: 100%;
+}
+
+/* Scroll progress indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #DAA520, #FFD700);
+  transform-origin: 0%;
+  z-index: 9999;
+}
+
+/* Floating animation for elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Blob animation for background elements */
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+/* Shimmer effect for loading states */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 1000px 100%;
+}
+
+/* Magnetic button effect (will be controlled via JS) */
+.magnetic-button {
+  transition: transform 0.2s ease;
+}
+
+/* Enhanced scroll behavior */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(218, 165, 32, 0.3);
+  color: inherit;
+}
+
+/* Animation delays for staggered effects */
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
