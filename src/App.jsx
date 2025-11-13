@@ -11,6 +11,9 @@ import Education from './sections/Education.jsx';
 import Contact from './sections/Contact.jsx';
 import ResumeViewer from './components/ResumeViewer.jsx';
 import GradientMesh from './components/GradientMesh.jsx';
+import ScrollProgress from './components/ScrollProgress.jsx';
+import BackToTop from './components/BackToTop.jsx';
+import { StatsSection } from './components/AnimatedCounter.jsx';
 
 // Main App component
 const App = () => {
@@ -73,6 +76,12 @@ const App = () => {
 
     return (
         <AnimatePresence>
+            {/* Scroll Progress Indicator */}
+            <ScrollProgress />
+
+            {/* Back to Top Button */}
+            <BackToTop />
+
             {/* Gradient Mesh Background */}
             <GradientMesh theme={theme} />
 
@@ -81,6 +90,7 @@ const App = () => {
                 <main className="relative z-10">
                     <Hero onShowResume={() => setShowResume(true)} />
                     <About />
+                    <StatsSection />
                     <Skills />
                     <Projects />
                     <Experience />
