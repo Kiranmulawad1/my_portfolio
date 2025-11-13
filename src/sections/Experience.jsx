@@ -1,25 +1,55 @@
 // src/sections/Experience.jsx
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import TimelineItem from '../components/TimelineItem';
+import experienceData from '../data/experience';
+
+const useInView = (ref) => {
+    const [inView, setInView] = useState(false);
+    useEffect(() => {
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                setInView(true);
+            }
+        });
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+        return () => observer.disconnect();
+    }, [ref]);
+    return inView;
+};
 
 function Experience() {
+    const experienceRef = useRef(null);
+    const inView = useInView(experienceRef);
+
     return (
-        <section id="experience" className="py-20 bg-white dark:bg-gray-900">
+        <section id="experience" ref={experienceRef} className="py-20 bg-transparent relative">
             <div className="container mx-auto px-6">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold text-gray-800 dark:text-white">Experience</h2>
-                    <p className="mt-2 text-gray-600 dark:text-gray-300">My professional journey.</p>
-                </div>
-                <div className="max-w-3xl mx-auto space-y-8">
-                    <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md text-gray-800 dark:text-white">
-                        <h3 className="text-xl font-bold">Thesis Intern - AI Funding Finder</h3>
-                        <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">iiterate Technologies GmbH | April 2025 – Present</p>
-                        <ul className="list-disc list-inside text-gray-700 dark:text-gray-200 space-y-1">
-                            <li>Built custom ETL pipelines for ingesting and embedding grant metadata.</li>
-                            <li>Used Pinecone for vector search, Streamlit for UI, Llama for GPT recommendations.</li>
-                            <li>Simulated real-world data engineering tasks: chunking, translation, reranking, citation.</li>
-                            <li>Deployed and tested app in cloud-like dev setup.</li>
-                        </ul>
-                    </div>
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.6 }}
+                    className="text-center mb-16"
+                >
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                        <span className="gradient-text">Experience</span>
+                    </h2>
+                    <p className="mt-3 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                        My professional journey and key accomplishments.
+                    </p>
+                </motion.div>
+
+                <div className="max-w-6xl mx-auto relative">
+                    {experienceData.map((item, index) => (
+                        <TimelineItem
+                            key={item.id}
+                            item={item}
+                            index={index}
+                            isLast={index === experienceData.length - 1}
+                        />
+                    ))}
                 </div>
             </div>
         </section>
