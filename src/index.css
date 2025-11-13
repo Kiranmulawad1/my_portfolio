@@ -121,16 +121,6 @@ html {
 
 /* ===== MODERN DESIGN PATTERNS ===== */
 
-/* Custom cursor styles - hide default cursor on desktop */
-@media (min-width: 768px) {
-  body {
-    cursor: none;
-  }
-  a, button, .cursor-hover {
-    cursor: none;
-  }
-}
-
 /* Neomorphism button styles */
 .neu-button-light {
   background: #FDFBF7;

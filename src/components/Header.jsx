@@ -18,42 +18,42 @@ const Header = ({ theme, toggleTheme }) => {
                     <motion.a
                         whileHover={{ scale: 1.1 }}
                         href="#about"
-                        className="nav-link animated-underline text-gray-600 dark:text-gray-300 font-medium cursor-hover"
+                        className="nav-link animated-underline text-gray-600 dark:text-gray-300 font-medium"
                     >
                         About
                     </motion.a>
                     <motion.a
                         whileHover={{ scale: 1.1 }}
                         href="#skills"
-                        className="nav-link animated-underline text-gray-600 dark:text-gray-300 font-medium cursor-hover"
+                        className="nav-link animated-underline text-gray-600 dark:text-gray-300 font-medium"
                     >
                         Skills
                     </motion.a>
                     <motion.a
                         whileHover={{ scale: 1.1 }}
                         href="#projects"
-                        className="nav-link animated-underline text-gray-600 dark:text-gray-300 font-medium cursor-hover"
+                        className="nav-link animated-underline text-gray-600 dark:text-gray-300 font-medium"
                     >
                         Projects
                     </motion.a>
                     <motion.a
                         whileHover={{ scale: 1.1 }}
                         href="#experience"
-                        className="nav-link animated-underline text-gray-600 dark:text-gray-300 font-medium cursor-hover"
+                        className="nav-link animated-underline text-gray-600 dark:text-gray-300 font-medium"
                     >
                         Experience
                     </motion.a>
                     <motion.a
                         whileHover={{ scale: 1.1 }}
                         href="#education"
-                        className="nav-link animated-underline text-gray-600 dark:text-gray-300 font-medium cursor-hover"
+                        className="nav-link animated-underline text-gray-600 dark:text-gray-300 font-medium"
                     >
                         Education
                     </motion.a>
                     <motion.a
                         whileHover={{ scale: 1.1 }}
                         href="#contact"
-                        className="nav-link animated-underline text-gray-600 dark:text-gray-300 font-medium cursor-hover"
+                        className="nav-link animated-underline text-gray-600 dark:text-gray-300 font-medium"
                     >
                         Contact
                     </motion.a>
@@ -62,7 +62,7 @@ const Header = ({ theme, toggleTheme }) => {
                 <motion.a
                     whileHover={{ scale: 1.05 }}
                     href="#contact"
-                    className="hidden md:inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-white font-bold py-2.5 px-6 rounded-full hover:shadow-glow transition-all duration-300 cursor-hover"
+                    className="hidden md:inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-white font-bold py-2.5 px-6 rounded-full hover:shadow-glow transition-all duration-300"
                 >
                     Let's Connect
                 </motion.a>

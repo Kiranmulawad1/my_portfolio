@@ -26,7 +26,7 @@ function Contact() {
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
                         <motion.a
                             href="mailto:kiranmulawad1@gmail.com"
-                            className="group relative bg-gradient-to-r from-gold-500 to-gold-600 text-white font-bold py-4 px-10 rounded-full hover:shadow-glow transition-all duration-300 flex items-center gap-3 cursor-hover overflow-hidden"
+                            className="group relative bg-gradient-to-r from-gold-500 to-gold-600 text-white font-bold py-4 px-10 rounded-full hover:shadow-glow transition-all duration-300 flex items-center gap-3 overflow-hidden"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >

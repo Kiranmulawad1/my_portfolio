@@ -62,7 +62,7 @@ const Skills = () => {
                     {skillsData.map((skill, index) => (
                         <motion.div
                             key={index}
-                            className="glass-card p-6 rounded-2xl text-center text-gray-800 dark:text-white group cursor-hover hover:shadow-neu-light dark:hover:shadow-neu-dark transition-all duration-300"
+                            className="glass-card p-6 rounded-2xl text-center text-gray-800 dark:text-white group hover:shadow-neu-light dark:hover:shadow-neu-dark transition-all duration-300"
                             variants={itemVariants}
                             whileHover={{ y: -8, scale: 1.02 }}
                             transition={{ type: "spring", stiffness: 300, damping: 20 }}

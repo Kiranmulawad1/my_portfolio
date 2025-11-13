@@ -43,14 +43,14 @@ const Hero = ({ onShowResume }) => {
                 >
                     <a
                         href="#projects"
-                        className="group relative inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-white font-bold py-4 px-10 rounded-full text-lg overflow-hidden transition-all duration-300 hover:shadow-glow hover:scale-105 cursor-hover"
+                        className="group relative inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-white font-bold py-4 px-10 rounded-full text-lg overflow-hidden transition-all duration-300 hover:shadow-glow hover:scale-105"
                     >
                         <span className="relative z-10">View My Work</span>
                         <div className="absolute inset-0 bg-gradient-to-r from-gold-600 to-gold-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </a>
                     <button
                         onClick={onShowResume}
-                        className="group relative inline-block bg-transparent border-2 border-gray-700 dark:border-gray-300 text-gray-700 dark:text-gray-300 font-bold py-4 px-10 rounded-full text-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-hover"
+                        className="group relative inline-block bg-transparent border-2 border-gray-700 dark:border-gray-300 text-gray-700 dark:text-gray-300 font-bold py-4 px-10 rounded-full text-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-105"
                     >
                         <span className="relative z-10 group-hover:text-white transition-colors duration-300">View CV 📄</span>
                         <div className="absolute inset-0 bg-gray-700 dark:bg-gray-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
