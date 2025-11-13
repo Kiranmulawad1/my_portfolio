@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const ProjectCard = ({ project, onDetailsClick, variants }) => {
     return (
         <motion.div
-            className="glass-card p-6 rounded-2xl shadow-xl project-card max-w-xs mx-auto cursor-hover overflow-hidden group"
+            className="glass-card p-6 rounded-2xl shadow-xl project-card max-w-xs mx-auto overflow-hidden group"
             whileHover={{ scale: 1.05, y: -5 }}
             variants={variants}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}

@@ -10,7 +10,6 @@ import Experience from './sections/Experience.jsx';
 import Education from './sections/Education.jsx';
 import Contact from './sections/Contact.jsx';
 import ResumeViewer from './components/ResumeViewer.jsx';
-import CustomCursor from './components/CustomCursor.jsx';
 import GradientMesh from './components/GradientMesh.jsx';
 
 // Main App component
@@ -74,9 +73,6 @@ const App = () => {
 
     return (
         <AnimatePresence>
-            {/* Custom Cursor */}
-            <CustomCursor />
-
             {/* Gradient Mesh Background */}
             <GradientMesh theme={theme} />
 
