@@ -1,13 +1,29 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Hero = ({ onShowResume }) => {
+    const { scrollY } = useScroll();
+
+    // Parallax transforms
+    const y1 = useTransform(scrollY, [0, 500], [0, 150]);
+    const y2 = useTransform(scrollY, [0, 500], [0, -100]);
+    const y3 = useTransform(scrollY, [0, 500], [0, 200]);
+
     return (
         <section id="hero" className="bg-transparent min-h-screen flex items-center justify-center relative overflow-hidden">
-            {/* Floating decorative blobs */}
-            <div className="absolute top-20 left-10 w-72 h-72 bg-gold-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-gold-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-gold-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+            {/* Floating decorative blobs with parallax */}
+            <motion.div
+                style={{ y: y1 }}
+                className="absolute top-20 left-10 w-72 h-72 bg-gold-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"
+            />
+            <motion.div
+                style={{ y: y2 }}
+                className="absolute top-40 right-10 w-72 h-72 bg-gold-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"
+            />
+            <motion.div
+                style={{ y: y3 }}
+                className="absolute -bottom-8 left-20 w-72 h-72 bg-gold-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"
+            />
 
             <div className="container mx-auto px-6 py-24 text-center relative z-10">
                 <motion.h1
