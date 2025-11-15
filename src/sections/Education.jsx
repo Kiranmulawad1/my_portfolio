@@ -1,23 +1,55 @@
 // src/sections/Education.jsx
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import TimelineItem from '../components/TimelineItem';
+import educationData from '../data/education';
+
+const useInView = (ref) => {
+    const [inView, setInView] = useState(false);
+    useEffect(() => {
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                setInView(true);
+            }
+        });
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+        return () => observer.disconnect();
+    }, [ref]);
+    return inView;
+};
 
 function Education() {
+    const educationRef = useRef(null);
+    const inView = useInView(educationRef);
+
     return (
-        <section id="education" className="py-20 dark:bg-gray-900">
+        <section id="education" ref={educationRef} className="py-20 bg-transparent relative">
             <div className="container mx-auto px-6">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold text-gray-800 dark:text-white">Education</h2>
-                    <p className="mt-2 text-gray-600 dark:text-gray-300">My academic background.</p>
-                </div>
-                <div className="max-w-3xl mx-auto space-y-8">
-                    <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md text-gray-800 dark:text-white">
-                        <h3 className="text-xl font-bold">M.Sc. Applied Data Science & Analytics</h3>
-                        <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">SRH Hochschule Heidelberg, Germany | October 2023 – Present</p>
-                    </div>
-                    <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md text-gray-800 dark:text-white">
-                        <h3 className="text-xl font-bold">Bachelors of Computer Applications (BCA)</h3>
-                        <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">P.C. Jabin Science College, Hubballi, India | June 2019 – August 2022</p>
-                    </div>
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.6 }}
+                    className="text-center mb-16"
+                >
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                        <span className="gradient-text">Education</span>
+                    </h2>
+                    <p className="mt-3 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                        My academic background and achievements.
+                    </p>
+                </motion.div>
+
+                <div className="max-w-6xl mx-auto relative">
+                    {educationData.map((item, index) => (
+                        <TimelineItem
+                            key={item.id}
+                            item={item}
+                            index={index}
+                            isLast={index === educationData.length - 1}
+                        />
+                    ))}
                 </div>
             </div>
         </section>
