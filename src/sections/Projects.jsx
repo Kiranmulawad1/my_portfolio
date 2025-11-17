@@ -53,16 +53,20 @@ const Projects = () => {
     };
 
     return (
-        <section id="projects" ref={projectsRef} className="py-20 dark:bg-gray-900">
+        <section id="projects" ref={projectsRef} className="py-20 bg-transparent relative">
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6 }}
                 className="container mx-auto px-6"
             >
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold text-gray-800 dark:text-white">My Projects</h2>
-                    <p className="mt-2 text-gray-600 dark:text-gray-300">A selection of my work demonstrating my skills and problem-solving approach.</p>
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                        <span className="gradient-text">My Projects</span>
+                    </h2>
+                    <p className="mt-3 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                        A selection of my work demonstrating my skills and problem-solving approach.
+                    </p>
                 </div>
                 <motion.div
                     variants={containerVariants}
