@@ -55,7 +55,7 @@ const ProjectModal = ({ project, onClose, isOpen }) => {
                 </div>
                 <div className="flex flex-wrap gap-4">
                     {project.liveLink && project.liveLink !== "#" && (
-                        <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="bg-[#DAA520] text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors flex items-center gap-2">
+                        <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="bg-[#3B82F6] text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors flex items-center gap-2">
                             Live Demo <span className="text-lg">🔗</span>
                         </a>
                     )}

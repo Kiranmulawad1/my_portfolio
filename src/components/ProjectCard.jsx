@@ -24,7 +24,7 @@ const ProjectCard = ({ project, onDetailsClick, variants }) => {
 
             {/* Content */}
             <div style={{ transform: 'translateZ(30px)' }}>
-                <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2 group-hover:text-gold-500 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2 group-hover:text-primary-500 transition-colors duration-300">
                     {project.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-2">
@@ -34,7 +34,7 @@ const ProjectCard = ({ project, onDetailsClick, variants }) => {
                 {/* Button with gradient effect */}
                 <button
                     onClick={() => onDetailsClick(project.id)}
-                    className="w-full bg-gradient-to-r from-gold-500 to-gold-600 text-white font-bold py-2.5 px-4 rounded-lg text-sm hover:shadow-glow transition-all duration-300 hover:scale-105"
+                    className="w-full bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold py-2.5 px-4 rounded-lg text-sm hover:shadow-glow transition-all duration-300 hover:scale-105"
                     style={{ transform: 'translateZ(40px)' }}
                 >
                     View Details

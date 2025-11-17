@@ -6,8 +6,8 @@ function Contact() {
     return (
         <section id="contact" className="py-20 bg-transparent relative overflow-hidden">
             {/* Decorative gradient blobs */}
-            <div className="absolute top-10 right-10 w-96 h-96 bg-gold-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-            <div className="absolute bottom-10 left-10 w-96 h-96 bg-gold-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+            <div className="absolute top-10 right-10 w-96 h-96 bg-primary-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+            <div className="absolute bottom-10 left-10 w-96 h-96 bg-primary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
 
             <div className="container mx-auto px-6 text-center relative z-10">
                 <motion.div
@@ -26,13 +26,13 @@ function Contact() {
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
                         <motion.a
                             href="mailto:kiranmulawad1@gmail.com"
-                            className="group relative bg-gradient-to-r from-gold-500 to-gold-600 text-white font-bold py-4 px-10 rounded-full hover:shadow-glow transition-all duration-300 flex items-center gap-3 overflow-hidden"
+                            className="group relative bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold py-4 px-10 rounded-full hover:shadow-glow transition-all duration-300 flex items-center gap-3 overflow-hidden"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
                             <span className="relative z-10 text-lg">Email Me</span>
                             <span className="relative z-10 text-xl">✉️</span>
-                            <div className="absolute inset-0 bg-gradient-to-r from-gold-600 to-gold-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </motion.a>
                     </div>
 

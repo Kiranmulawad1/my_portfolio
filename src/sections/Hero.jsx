@@ -14,15 +14,15 @@ const Hero = ({ onShowResume }) => {
             {/* Floating decorative blobs with parallax */}
             <motion.div
                 style={{ y: y1 }}
-                className="absolute top-20 left-10 w-72 h-72 bg-gold-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"
+                className="absolute top-20 left-10 w-72 h-72 bg-primary-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"
             />
             <motion.div
                 style={{ y: y2 }}
-                className="absolute top-40 right-10 w-72 h-72 bg-gold-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"
+                className="absolute top-40 right-10 w-72 h-72 bg-primary-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"
             />
             <motion.div
                 style={{ y: y3 }}
-                className="absolute -bottom-8 left-20 w-72 h-72 bg-gold-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"
+                className="absolute -bottom-8 left-20 w-72 h-72 bg-primary-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"
             />
 
             <div className="container mx-auto px-6 py-24 text-center relative z-10">
@@ -59,10 +59,10 @@ const Hero = ({ onShowResume }) => {
                 >
                     <a
                         href="#projects"
-                        className="group relative inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-white font-bold py-4 px-10 rounded-full text-lg overflow-hidden transition-all duration-300 hover:shadow-glow hover:scale-105"
+                        className="group relative inline-block bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold py-4 px-10 rounded-full text-lg overflow-hidden transition-all duration-300 hover:shadow-glow hover:scale-105"
                     >
                         <span className="relative z-10">View My Work</span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-gold-600 to-gold-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </a>
                     <button
                         onClick={onShowResume}

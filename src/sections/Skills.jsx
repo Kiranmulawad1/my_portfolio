@@ -74,7 +74,7 @@ const Skills = () => {
                             >
                                 {skill.icon}
                             </motion.div>
-                            <h3 className="text-xl font-bold mb-2 group-hover:text-gold-500 transition-colors duration-300">
+                            <h3 className="text-xl font-bold mb-2 group-hover:text-primary-500 transition-colors duration-300">
                                 {skill.title}
                             </h3>
                             <p className="text-sm text-gray-600 dark:text-gray-300">

@@ -37,7 +37,7 @@ const About = () => {
                     className="w-fit mx-auto relative"
                 >
                     {/* Decorative gradient ring */}
-                    <div className="absolute -inset-4 bg-gradient-to-r from-gold-500 to-gold-600 rounded-full blur-2xl opacity-30 animate-pulse"></div>
+                    <div className="absolute -inset-4 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full blur-2xl opacity-30 animate-pulse"></div>
                     <div className="relative">
                         <img
                             src={profilePic}

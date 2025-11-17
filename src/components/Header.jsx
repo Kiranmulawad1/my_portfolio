@@ -62,7 +62,7 @@ const Header = ({ theme, toggleTheme }) => {
                 <motion.a
                     whileHover={{ scale: 1.05 }}
                     href="#contact"
-                    className="hidden md:inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-white font-bold py-2.5 px-6 rounded-full hover:shadow-glow transition-all duration-300"
+                    className="hidden md:inline-block bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold py-2.5 px-6 rounded-full hover:shadow-glow transition-all duration-300"
                 >
                     Let's Connect
                 </motion.a>

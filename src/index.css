@@ -117,7 +117,7 @@ html {
 }
 
 /* improve header active state you already toggle via JS */
-.nav-link.active { color: #fff; border-bottom-color: #DAA520; }
+.nav-link.active { color: #fff; border-bottom-color: #3B82F6; }
 
 /* ===== MODERN DESIGN PATTERNS ===== */
 
@@ -220,7 +220,7 @@ html {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background: linear-gradient(90deg, #DAA520, #FFD700);
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6);
   transition: width 0.3s ease;
 }
 
@@ -235,7 +235,7 @@ html {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #DAA520, #FFD700);
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6);
   transform-origin: 0%;
   z-index: 9999;
 }
