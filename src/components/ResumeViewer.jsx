@@ -86,7 +86,7 @@ export default function ResumeViewer({ onClose }) {
 
         <div className="mt-4 text-center">
           <a href={cvUrl} download="Kiran_Mulawad_CV.pdf"
-             className="inline-block bg-[#DAA520] text-white font-semibold py-2 px-6 rounded-lg hover:bg-opacity-90 transition-colors">
+             className="inline-block bg-[#3B82F6] text-white font-semibold py-2 px-6 rounded-lg hover:bg-opacity-90 transition-colors">
             Download PDF
           </a>
         </div>

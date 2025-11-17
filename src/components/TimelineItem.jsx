@@ -12,7 +12,7 @@ const TimelineItem = ({ item, index, isLast }) => {
         >
             {/* Timeline line */}
             {!isLast && (
-                <div className="absolute left-4 md:left-1/2 top-12 w-0.5 h-full bg-gradient-to-b from-gold-500 to-transparent md:transform md:-translate-x-1/2"></div>
+                <div className="absolute left-4 md:left-1/2 top-12 w-0.5 h-full bg-gradient-to-b from-primary-500 to-transparent md:transform md:-translate-x-1/2"></div>
             )}
 
             {/* Content container */}
@@ -33,13 +33,13 @@ const TimelineItem = ({ item, index, isLast }) => {
                         </div>
 
                         {item.company && (
-                            <p className="text-gold-600 dark:text-gold-400 font-semibold mb-2">
+                            <p className="text-primary-600 dark:text-primary-400 font-semibold mb-2">
                                 {item.company}
                             </p>
                         )}
 
                         {item.institution && (
-                            <p className="text-gold-600 dark:text-gold-400 font-semibold mb-2">
+                            <p className="text-primary-600 dark:text-primary-400 font-semibold mb-2">
                                 {item.institution}
                             </p>
                         )}
@@ -58,7 +58,7 @@ const TimelineItem = ({ item, index, isLast }) => {
                             <ul className="space-y-2">
                                 {item.achievements.map((achievement, i) => (
                                     <li key={i} className="flex items-start gap-2 text-gray-700 dark:text-gray-300 text-sm">
-                                        <span className="text-gold-500 mt-1">•</span>
+                                        <span className="text-primary-500 mt-1">•</span>
                                         <span>{achievement}</span>
                                     </li>
                                 ))}
@@ -70,7 +70,7 @@ const TimelineItem = ({ item, index, isLast }) => {
                                 {item.skills.map((skill, i) => (
                                     <span
                                         key={i}
-                                        className="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium"
+                                        className="px-3 py-1 bg-primary-500/10 text-primary-600 dark:text-primary-400 rounded-full text-xs font-medium"
                                     >
                                         {skill}
                                     </span>
@@ -90,9 +90,9 @@ const TimelineItem = ({ item, index, isLast }) => {
                         className="relative"
                     >
                         {/* Outer glow ring */}
-                        <div className="absolute inset-0 rounded-full bg-gold-500/30 animate-ping"></div>
+                        <div className="absolute inset-0 rounded-full bg-primary-500/30 animate-ping"></div>
                         {/* Main dot */}
-                        <div className="relative w-8 h-8 bg-gradient-to-br from-gold-500 to-gold-600 rounded-full border-4 border-white dark:border-gray-900 shadow-lg flex items-center justify-center">
+                        <div className="relative w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full border-4 border-white dark:border-gray-900 shadow-lg flex items-center justify-center">
                             <div className="w-2 h-2 bg-white rounded-full"></div>
                         </div>
                     </motion.div>
