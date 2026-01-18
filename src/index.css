@@ -117,7 +117,7 @@ html {
 }
 
 /* improve header active state you already toggle via JS */
-.nav-link.active { color: #fff; border-bottom-color: #DAA520; }
+.nav-link.active { color: #fff; border-bottom-color: #8b5cf6; }
 
 /* ===== MODERN DESIGN PATTERNS ===== */
 
@@ -177,7 +177,7 @@ html {
 
 /* Gradient text effect */
 .gradient-text {
-  background: linear-gradient(135deg, #DAA520 0%, #FFD700 50%, #B8860B 100%);
+  background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 50%, #7c3aed 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -187,9 +187,9 @@ html {
 
 /* Glowing text effect */
 .glow-text {
-  text-shadow: 0 0 10px rgba(218, 165, 32, 0.5),
-               0 0 20px rgba(218, 165, 32, 0.3),
-               0 0 30px rgba(218, 165, 32, 0.2);
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.5),
+               0 0 20px rgba(139, 92, 246, 0.3),
+               0 0 30px rgba(139, 92, 246, 0.2);
 }
 
 /* Glass morphism enhancement */
@@ -220,7 +220,7 @@ html {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background: linear-gradient(90deg, #DAA520, #FFD700);
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
   transition: width 0.3s ease;
 }
 
@@ -235,7 +235,7 @@ html {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #DAA520, #FFD700);
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
   transform-origin: 0%;
   z-index: 9999;
 }
@@ -296,7 +296,7 @@ html {
 
 /* Selection color */
 ::selection {
-  background-color: rgba(218, 165, 32, 0.3);
+  background-color: rgba(139, 92, 246, 0.3);
   color: inherit;
 }
 

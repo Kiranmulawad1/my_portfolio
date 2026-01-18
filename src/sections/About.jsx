@@ -37,7 +37,7 @@ const About = () => {
                     className="w-fit mx-auto relative"
                 >
                     {/* Decorative gradient ring */}
-                    <div className="absolute -inset-4 bg-gradient-to-r from-gold-500 to-gold-600 rounded-full blur-2xl opacity-30 animate-pulse"></div>
+                    <div className="absolute -inset-4 bg-gradient-to-r from-violet-500 to-violet-600 rounded-full blur-2xl opacity-30 animate-pulse"></div>
                     <div className="relative">
                         <img
                             src={profilePic}
@@ -57,10 +57,10 @@ const About = () => {
                     </h2>
                     <div className="glass-card p-6 rounded-2xl">
                         <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-                            An Applied Data Science and Analytics master's student with strong experience in AI tools, LLM-based projects, data engineering, and cloud technologies. I am an AI/Data Engineer with robust experience in Python-based data workflows, cloud data handling, and AI/NLP applications. I have built scalable semantic search pipelines with Ollama, Pinecone, and Streamlit.
+                            AI/Data Engineer passionate about building intelligent systems. I specialize in <span className="text-violet-600 dark:text-violet-400 font-semibold">LLMs, data pipelines, and cloud technologies</span> — turning complex data into actionable insights.
                         </p>
                         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mt-4 text-lg">
-                            Currently, I am completing my thesis on AI-based grant discovery automation at iiterate Technologies as part of a thesis internship. I am actively seeking AI Engineer or Data Engineer roles in innovative environments where I can apply my skills to solve complex problems and contribute to cutting-edge solutions.
+                            Master's in Applied Data Science, actively seeking full-time opportunities as an <span className="text-violet-600 dark:text-violet-400 font-semibold">AI Engineer, Data Engineer, or Data Scientist</span>.
                         </p>
                     </div>
                 </motion.div>

@@ -15,54 +15,29 @@ const Header = ({ theme, toggleTheme }) => {
                 {/* Use the new AnimatedName component here */}
                 <AnimatedName firstName="Kiran" lastName="Mulawad" />
                 <div className="hidden md:flex space-x-8 items-center">
-                    <motion.a
-                        whileHover={{ scale: 1.1 }}
-                        href="#about"
-                        className="nav-link animated-underline text-gray-600 dark:text-gray-300 font-medium"
-                    >
-                        About
-                    </motion.a>
-                    <motion.a
-                        whileHover={{ scale: 1.1 }}
-                        href="#skills"
-                        className="nav-link animated-underline text-gray-600 dark:text-gray-300 font-medium"
-                    >
-                        Skills
-                    </motion.a>
-                    <motion.a
-                        whileHover={{ scale: 1.1 }}
-                        href="#projects"
-                        className="nav-link animated-underline text-gray-600 dark:text-gray-300 font-medium"
-                    >
-                        Projects
-                    </motion.a>
-                    <motion.a
-                        whileHover={{ scale: 1.1 }}
-                        href="#experience"
-                        className="nav-link animated-underline text-gray-600 dark:text-gray-300 font-medium"
-                    >
-                        Experience
-                    </motion.a>
-                    <motion.a
-                        whileHover={{ scale: 1.1 }}
-                        href="#education"
-                        className="nav-link animated-underline text-gray-600 dark:text-gray-300 font-medium"
-                    >
-                        Education
-                    </motion.a>
-                    <motion.a
-                        whileHover={{ scale: 1.1 }}
-                        href="#contact"
-                        className="nav-link animated-underline text-gray-600 dark:text-gray-300 font-medium"
-                    >
-                        Contact
-                    </motion.a>
+                    {[
+                        { name: 'About', href: '#about' },
+                        { name: 'Skills', href: '#skills' },
+                        { name: 'Projects', href: '#projects' },
+                        { name: 'Experience', href: '#experience' },
+                        { name: 'Education', href: '#education' },
+                        { name: 'Contact', href: '#contact' }
+                    ].map((item) => (
+                        <motion.a
+                            key={item.name}
+                            whileHover={{ scale: 1.1 }}
+                            href={item.href}
+                            className="nav-link animated-underline text-gray-600 dark:text-gray-300 font-medium"
+                        >
+                            {item.name}
+                        </motion.a>
+                    ))}
                     <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
                 </div>
                 <motion.a
                     whileHover={{ scale: 1.05 }}
                     href="#contact"
-                    className="hidden md:inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-white font-bold py-2.5 px-6 rounded-full hover:shadow-glow transition-all duration-300"
+                    className="hidden md:inline-block bg-gradient-to-r from-violet-500 to-violet-600 text-white font-bold py-2.5 px-6 rounded-full hover:shadow-glow transition-all duration-300"
                 >
                     Let's Connect
                 </motion.a>

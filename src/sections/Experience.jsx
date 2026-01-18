@@ -25,7 +25,7 @@ function Experience() {
     const inView = useInView(experienceRef);
 
     return (
-        <section id="experience" ref={experienceRef} className="py-20 bg-transparent relative">
+        <section id="experience" ref={experienceRef} className="py-20 bg-transparent relative overflow-hidden">
             <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -41,13 +41,13 @@ function Experience() {
                     </p>
                 </motion.div>
 
-                <div className="max-w-6xl mx-auto relative">
+                {/* Cards grid */}
+                <div className="max-w-4xl mx-auto space-y-6">
                     {experienceData.map((item, index) => (
                         <TimelineItem
                             key={item.id}
                             item={item}
                             index={index}
-                            isLast={index === experienceData.length - 1}
                         />
                     ))}
                 </div>

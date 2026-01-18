@@ -4,21 +4,7 @@ import ProjectCard from '../components/ProjectCard.jsx';
 import ProjectModal from '../components/ProjectModal.jsx';
 import projectsData from '../data/projects.js';
 
-const useInView = (ref) => {
-    const [inView, setInView] = useState(false);
-    useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                setInView(true);
-            }
-        });
-        if (ref.current) {
-            observer.observe(ref.current);
-        }
-        return () => observer.disconnect();
-    }, [ref]);
-    return inView;
-};
+import useInView from '../hooks/useInView.jsx';
 
 const Projects = () => {
     const projectsRef = useRef(null);
@@ -64,16 +50,18 @@ const Projects = () => {
                     <h2 className="text-3xl font-bold text-gray-800 dark:text-white">My Projects</h2>
                     <p className="mt-2 text-gray-600 dark:text-gray-300">A selection of my work demonstrating my skills and problem-solving approach.</p>
                 </div>
-                <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate={inView ? "show" : "hidden"}
-                    className="grid md:grid-cols-2 lg:grid-cols-4 gap-2"
-                >
-                    {projectsData.map(project => (
-                        <ProjectCard key={project.id} project={project} onDetailsClick={handleDetailsClick} variants={itemVariants} />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[300px]">
+                    {projectsData.map((project, i) => (
+                        <motion.div
+                            key={project.id}
+                            className={`relative rounded-xl overflow-hidden group ${i === 0 || i === 3 ? "md:col-span-2" : ""
+                                }`}
+                            variants={itemVariants}
+                        >
+                            <ProjectCard project={project} onDetailsClick={handleDetailsClick} variants={itemVariants} isBento={true} />
+                        </motion.div>
                     ))}
-                </motion.div>
+                </div>
             </motion.div>
             <ProjectModal project={selectedProject} isOpen={isModalOpen} onClose={handleCloseModal} />
         </section>

@@ -41,13 +41,13 @@ function Education() {
                     </p>
                 </motion.div>
 
-                <div className="max-w-6xl mx-auto relative">
+                {/* Cards grid */}
+                <div className="max-w-4xl mx-auto space-y-6">
                     {educationData.map((item, index) => (
                         <TimelineItem
                             key={item.id}
                             item={item}
                             index={index}
-                            isLast={index === educationData.length - 1}
                         />
                     ))}
                 </div>

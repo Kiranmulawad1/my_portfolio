@@ -8,29 +8,30 @@ export default {
   darkMode: 'class', // Add this line to enable dark mode via class
   theme: {
     extend: {
-      // Custom colors for gradient effects
+      // Custom colors for gradient effects - Violet theme
       colors: {
-        gold: {
-          50: '#fefce8',
-          100: '#fef9c3',
-          200: '#fef08a',
-          300: '#fde047',
-          400: '#facc15',
-          500: '#DAA520',
-          600: '#ca8a04',
-          700: '#a16207',
-          800: '#854d0e',
-          900: '#713f12',
+        violet: {
+          50: '#f5f3ff',
+          100: '#ede9fe',
+          200: '#ddd6fe',
+          300: '#c4b5fd',
+          400: '#a78bfa',
+          500: '#8b5cf6',
+          600: '#7c3aed',
+          700: '#6d28d9',
+          800: '#5b21b6',
+          900: '#4c1d95',
         },
       },
-      // Neomorphism box shadows
+      // Neomorphism box shadows - Violet theme
       boxShadow: {
         'neu-light': '12px 12px 24px rgba(163, 177, 198, 0.6), -12px -12px 24px rgba(255, 255, 255, 0.5)',
         'neu-light-inset': 'inset 6px 6px 12px rgba(163, 177, 198, 0.4), inset -6px -6px 12px rgba(255, 255, 255, 0.5)',
         'neu-dark': '12px 12px 24px rgba(0, 0, 0, 0.4), -12px -12px 24px rgba(255, 255, 255, 0.02)',
         'neu-dark-inset': 'inset 6px 6px 12px rgba(0, 0, 0, 0.4), inset -6px -6px 12px rgba(255, 255, 255, 0.02)',
-        'glow': '0 0 20px rgba(218, 165, 32, 0.5)',
-        'glow-lg': '0 0 40px rgba(218, 165, 32, 0.6)',
+        'glow': '0 0 20px rgba(139, 92, 246, 0.5)',
+        'glow-lg': '0 0 40px rgba(139, 92, 246, 0.6)',
+        'glow-violet': '0 0 30px rgba(139, 92, 246, 0.4)',
       },
       // Custom animations
       animation: {
@@ -52,10 +53,10 @@ export default {
         },
         glow: {
           '0%': {
-            'box-shadow': '0 0 20px rgba(218, 165, 32, 0.5)',
+            'box-shadow': '0 0 20px rgba(139, 92, 246, 0.5)',
           },
           '100%': {
-            'box-shadow': '0 0 40px rgba(218, 165, 32, 0.8)',
+            'box-shadow': '0 0 40px rgba(139, 92, 246, 0.8)',
           },
         },
         float: {

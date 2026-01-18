@@ -10,7 +10,7 @@ import Experience from './sections/Experience.jsx';
 import Education from './sections/Education.jsx';
 import Contact from './sections/Contact.jsx';
 import ResumeViewer from './components/ResumeViewer.jsx';
-import GradientMesh from './components/GradientMesh.jsx';
+import Background from './components/Background.jsx';
 import ScrollProgress from './components/ScrollProgress.jsx';
 import BackToTop from './components/BackToTop.jsx';
 import { StatsSection } from './components/AnimatedCounter.jsx';
@@ -24,7 +24,7 @@ const App = () => {
         }
         return 'dark';
     });
-    
+
     // State to control the CV viewer modal
     const [showResume, setShowResume] = useState(false);
 
@@ -42,7 +42,7 @@ const App = () => {
     const toggleTheme = () => {
         setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
     };
-    
+
     // For smooth scrolling and active nav links
     useEffect(() => {
         const sections = document.querySelectorAll('main section');
@@ -82,8 +82,8 @@ const App = () => {
             {/* Back to Top Button */}
             <BackToTop />
 
-            {/* Gradient Mesh Background */}
-            <GradientMesh theme={theme} />
+            {/* Dot Grid + Aurora Background */}
+            <Background theme={theme} />
 
             <div className="antialiased font-inter bg-[#FDFBF7] dark:bg-gray-900 transition-colors duration-500 relative">
                 <Header theme={theme} toggleTheme={toggleTheme} />
